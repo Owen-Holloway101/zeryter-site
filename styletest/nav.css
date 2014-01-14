@@ -1,0 +1,116 @@
+#nav {
+background: #2E3436;
+/* Position */
+position: fixed;
+width: 100%;
+height: 30px;
+top: 0px;
+left: 0px;
+/* padding etc ... */
+line-height: 30px;
+padding-left: 55px;
+padding-right: 10px;
+padding-top: 10px;
+padding-bottom: 10px;
+box-shadow: 0px 0px 5px 0px #000000;
+/* Text */
+text-align: left;
+color:#F9F1FB;
+}
+
+t {
+margin-right: 10px;
+}
+
+img {
+margin-right: 10px;
+float:left;
+}
+
+underlinedButton {
+/* wrapping */
+border-bottom: 2px solid #F9F1FB;
+box-shadow: 0px 0px 10px 0px #000000;
+height: 28px;
+/* padding etc ... */
+padding-left: 4px;
+padding-right: 4px;
+padding-top: 3px;
+padding-bottom: 3px;
+margin-right: 10px;
+/* ANIMATION */
+animation-name: buttonUNHover;
+animation-duration: 0.5s;
+animation-timing-function: linear;
+animation-iteration-count: 1;
+animation-play-state: running;
+/* Safari and Chrome: */
+-webkit-animation-name: buttonUNHover;
+-webkit-animation-duration: 0.5s;
+-webkit-animation-timing-function: linear;
+-webkit-animation-iteration-count: 1;
+-webkit-animation-play-state: running;
+}
+underlinedButton:hover {
+/* active elements */
+border-bottom: 2px solid #16DC0C;
+cursor: pointer;
+/* ANIMATION */
+animation-name: buttonHover;
+animation-duration: 0.5s;
+animation-timing-function: linear;
+animation-iteration-count: 1;
+animation-play-state: running;
+/* Safari and Chrome: */
+-webkit-animation-name: buttonHover;
+-webkit-animation-duration: 0.5s;
+-webkit-animation-timing-function: linear;
+-webkit-animation-iteration-count: 1;
+-webkit-animation-play-state: running;
+}
+underlinedButton:active {
+/* active elements */
+border-bottom: 2px solid #82F87C;
+box-shadow: 0px 0px 2px 0px #000000;
+cursor: pointer;
+}
+
+/* ANIMATIONS */
+
+/* NON-WEBKIT */
+@keyframes buttonHover {
+0%{border-bottom: 2px solid #F9F1FB;}
+20%{border-bottom: 2px solid #BCFBB9;}
+40%{border-bottom: 2px solid #82F87C;}
+60%{border-bottom: 2px solid #50F547;}
+80%{border-bottom: 2px solid #18F20D;}
+100%{border-bottom: 2px solid #16DC0C;}
+}
+/*SAFARI AND CHROME*/
+@-webkit-keyframes buttonHover{
+0%{border-bottom: 2px solid #F9F1FB;}
+20%{border-bottom: 2px solid #BCFBB9;}
+40%{border-bottom: 2px solid #82F87C;}
+60%{border-bottom: 2px solid #50F547;}
+80%{border-bottom: 2px solid #18F20D;}
+100%{border-bottom: 2px solid #16DC0C;} 
+}
+
+/* NON-WEBKIT */
+@keyframes buttonUNHover {
+0%{border-bottom: 2px solid #16DC0C;}
+20%{border-bottom: 2px solid #18F20D;}
+40%{border-bottom: 2px solid #50F547;}
+60%{border-bottom: 2px solid #82F87C;}
+80%{border-bottom: 2px solid #BCFBB9;}
+100%{border-bottom: 2px solid #F9F1FB;} 
+}
+/*SAFARI AND CHROME*/
+@-webkit-keyframes buttonUNHover{
+0%{border-bottom: 2px solid #16DC0C;}
+20%{border-bottom: 2px solid #18F20D;}
+40%{border-bottom: 2px solid #50F547;}
+60%{border-bottom: 2px solid #82F87C;}
+80%{border-bottom: 2px solid #BCFBB9;}
+100%{border-bottom: 2px solid #F9F1FB;} 
+}
