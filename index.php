@@ -23,6 +23,8 @@ include("nav.html");
 <t>You have landed on zeryter.tk</t><br>
 <br>
 <t>Welcome.</t><br>
+<br>
+<t>This is some test text</t><br>
 </div>
 <!---
 <img class=zeryterLogo src=/assets/zeryt.png></img>
