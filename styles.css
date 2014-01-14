@@ -1,54 +1,83 @@
 body {
-text-align: center;
-font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-padding: 60px;
-background-color:#33393A;
-background-image: 
-linear-gradient(rgba(14, 16, 17,.3) 1px, transparent 1px),
-linear-gradient(90deg, rgba(14, 16, 17,.3) 1px, transparent 1px);
-background-size:20px 20px, 20px 20px;
-background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
-padding-top: 60px;
+	text-align: center;
+	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+	padding: 60px;
+	background-color:#33393A;
+	background-image: 
+	linear-gradient(rgba(14, 16, 17,.3) 1px, transparent 1px),
+	linear-gradient(90deg, rgba(14, 16, 17,.3) 1px, transparent 1px);
+	background-size:20px 20px, 20px 20px;
+	background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+	padding-top: 60px;
 }
 
 /* DIVs */
 
 #post {
-/*Colours and text*/
-background: #ffffff;
-text-align: left;
-/*Box*/
-border: 2px solid #748978;
-margin-top: 6px;
-padding-top:10px;
-padding-bottom:10px;
-padding-left: 10px;
-padding-right: 10px;
+	/*Colours and text*/
+	background: #ffffff;
+	text-align: left;
+	/*Box*/
+	border: 2px solid #748978;
+	margin-top: 6px;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 input#betterTextBox {
-/* wrapping */
-background: #2E3436;
-color: #FFFFFF;
-border: none;
-border-bottom: 4px solid #2E3436;
-height: 28px;
-/* padding etc ... */
-margin: 4px;
-padding-left: 10px;
-padding-right: 10px;
-padding-top: 3px;
-padding-bottom: 3px;
+	/* wrapping */
+	background: #2E3436;
+	color: #FFFFFF;
+	border: none;
+	border-bottom: 4px solid #3D4548;
+	height: 28px;
+	/* padding etc ... */
+	margin: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
 }
 input#betterTextBox:hover{
-border-bottom: 4px solid #16DC0C;
+	border-bottom: 4px solid #16DC0C;
 }
 input#betterTextBox:active{
-border-bottom: 4px solid #16DC0C;
+	border-bottom: 4px solid #16DC0C;
 }
 input#betterTextBox:focus{
-border-bottom: 4px solid #16DC0C;
-outline: 0;
+	border-bottom: 4px solid #16DC0C;
+	outline: 0;
+}
+
+textarea#betterTextArea {
+	/* wrapping */
+	background: #2E3436;
+	color: #FFFFFF;
+	border: none;
+	border-bottom: 4px solid #3D4548;
+	height: 28px;
+	/* padding etc ... */
+	margin: 4px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 3px;
+	/* element specific */
+	width:100%;
+	height: 200px;
+	resize: vertical;
+}
+textarea#betterTextArea:hover{
+	border-bottom: 4px solid #16DC0C;
+}
+textarea#betterTextArea:active{
+	border-bottom: 4px solid #16DC0C;
+}
+textarea#betterTextArea:focus{
+	border-bottom: 4px solid #16DC0C;
+	outline: 0;
 }
 
 /* Classes */
@@ -56,12 +85,13 @@ outline: 0;
 /*The very pretty ZerytButton! Complete with animations*/
 button.zerytButton {
 /* Text stuff */
-color: #33393A;
+color:#ffffff;
+background:#41494C;
 /*Unbuttonisation*/
 border: 0;
 outline: none; 
 /* Box */
-background: #F2F1F0;
+line-height: 26px;
 /*border-top: 2px solid #888A83;*/
 border-bottom: 2px solid #748978;
 /*border-left: 2px solid #888A83;

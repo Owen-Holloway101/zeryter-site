@@ -23,10 +23,10 @@ function pageSelect(page) {
 include("nav.html");
 ?>
 
-<div id=post>
-<button onclick=pageSelect('website') class=zerytButton style="background:#41494C; color:#ffffff; line-height: 26px;">Website</button>
-<button onclick=pageSelect('P2P-CHAT') class=zerytButton style="background:#41494C; color:#ffffff; line-height: 26px;">P2P-CHAT</button>
-<button onclick=pageSelect('LongText') class=zerytButton style="background:#41494C; color:#ffffff; line-height: 26px;">LongText (site testing)</button>
+<div id="post">
+<button onclick=pageSelect('website') class=zerytButton>Website</button>
+<button onclick=pageSelect('P2P-CHAT') class=zerytButton>P2P-CHAT</button>
+<button onclick=pageSelect('LongText') class=zerytButton>LongText (site testing)</button>
 </div>
 
 <?php
