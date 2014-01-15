@@ -11,7 +11,13 @@ if ( preg_match("/MSIE/",$_SERVER['HTTP_USER_AGENT']) ) {
 	<title>Zeryter - Home</title>
 	<link rel="shortcut icon" href="assets/icon.ico">
 	<link rel="stylesheet" type="text/css" href="styles.css">
-	<script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		function newPost() {
+			console.log("New Post");
+			var text = $('textarea#betterTextArea').val();
+			console.log(text);
+		}
 	</script>
 </head>
 
@@ -25,10 +31,8 @@ if ( preg_match("/MSIE/",$_SERVER['HTTP_USER_AGENT']) ) {
 	</div>
 	<div id="post">
 		<textarea id="betterTextArea" name="postText"></textarea>
-		<button onclick=pageSelect('website') class=zerytButton style="margin-left: 10px; padding-left: 20px; padding-right: 20px;">Post</button>
+		<button onclick=newPost(); class=zerytButton style="margin-left: 10px; padding-left: 20px; padding-right: 20px;">Post</button>
 	</div>
-
-
 </body>
 
 </html>
