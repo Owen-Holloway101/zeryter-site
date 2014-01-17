@@ -11,13 +11,13 @@ $handle = fopen($my_file, 'r') or die('Cannot open file:  '.$my_file);
 $data = fread($handle,filesize($my_file));
 if ($data == $_COOKIE["session"]) {
 	$loggedin = 1;
-	echo "logged in";
+	//echo "logged in";
 	//echo "<br>";
 	//echo $data;
 	//echo "<br>";
 	//echo $_COOKIE["session"];
 } else {
-	echo "not logged in";
+	//echo "not logged in";
 	//echo "<br>";
 	//echo $data;
 	//echo "<br>";

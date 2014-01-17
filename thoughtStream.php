@@ -8,31 +8,7 @@ if ( preg_match("/MSIE/",$_SERVER['HTTP_USER_AGENT']) ) {
 <html>
 
 <?php
-//I am aware of the complete and utter insecurity of this current system, but I just don't care.
-
-ini_set('display_errors',1);
-ini_set('display_startup_errors',1);
-error_reporting(-1);
-
-$loggedin = 0;
-$my_file = 'currentSession';
-$handle = fopen($my_file, 'r') or die('Cannot open file:  '.$my_file);
-$data = fread($handle,filesize($my_file));
-if ($data == $_COOKIE["session"]) {
-	$loggedin = 1;
-	echo "logged in";
-	//echo "<br>";
-	//echo $data;
-	//echo "<br>";
-	//echo $_COOKIE["session"];
-} else {
-	echo "not logged in";
-	//echo "<br>";
-	//echo $data;
-	//echo "<br>";
-	//echo $_COOKIE["session"];
-}
-fclose($handle);
+require 'session.php';
 ?>
 
 <head>
@@ -50,6 +26,10 @@ fclose($handle);
 				var text = $("textarea#betterTextArea").val();
 				$("textarea#betterTextArea").val("");
 				console.log(text);
+				var expDate = new Date();
+				expDate.setTime(expDate.getTime()+(60*60)); //set to an hour from Now
+				document.cookie="post=" + text + ";" + expDate;
+				window.location.href="postThought.php";
 			}
 		</script>';
 	}
@@ -85,6 +65,11 @@ fclose($handle);
 		';
 	}
 	?>
+	<?php
+
+	include "thoughtStream.post";
+	?>
+
 </body>
 
 </html>
