@@ -1,25 +1,10 @@
 <?php
+require 'nav.php';
 ?>
-
 <!--Owen Holloway - Zeryt - 2014-->
-
 <html>
 
 <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
-
-<style type="text/css">
-	body{
-		background: #2E3436;
-		
-		/*Font align and style*/
-		color: #ffffff;
-		text-align: center;
-		font-family: 'Inconsolata', sans-serif;
-
-		/*box*/
-		margin-top: 50px;
-	}
-</style>
 
 <head>
 	<title>404 - Thats an error</title>
