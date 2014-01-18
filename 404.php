@@ -1,18 +1,33 @@
-<!--Owen Holloway 2013 ZerytSoft-->
+<?php
+?>
+
+<!--Owen Holloway - Zeryt - 2014-->
+
 <html>
 
+<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+
+<style type="text/css">
+	body{
+		background: #2E3436;
+		
+		/*Font align and style*/
+		color: #ffffff;
+		text-align: center;
+		font-family: 'Inconsolata', sans-serif;
+
+		/*box*/
+		margin-top: 50px;
+	}
+</style>
+
 <head>
-<link rel="stylesheet" type="text/css" href="/404.css">
+	<title>404 - Thats an error</title>
 </head>
 
 <body>
-<?php
-include("nav.html");
-?>
-
-<div class=circle>
-<t class=bubble>404: This is not a page .... no seriously</t>
-</div>
+	<h3>404 .... Thats an error, in this case it means you typed something wrong and this page does not exist.</h3>
+	<i>.... or I have messed up and broken something</i>	
 </body>
 
 </html>
