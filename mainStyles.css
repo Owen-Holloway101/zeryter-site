@@ -1,0 +1,11 @@
+body{
+		background: #2E3436;
+		
+		/*Font align and style*/
+		color: #ffffff;
+		text-align: center;
+		font-family: 'Inconsolata', sans-serif;
+
+		/*box*/
+		margin-top: 50px;
+}
