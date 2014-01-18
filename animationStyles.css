@@ -1,0 +1,38 @@
+/*Zerytbutton hover animation*/
+/* NON-WEBKIT */
+@keyframes hover {
+0%{border-bottom: 2px solid #748978;}
+20%{border-bottom: 2px solid #6A9372;}
+40%{border-bottom: 2px solid #51AC63;}
+60%{border-bottom: 2px solid #2DD04D;}
+80%{border-bottom: 2px solid #25D848;}
+100%{border-bottom: 2px solid #14E942;}
+}
+/*SAFARI AND CHROME*/
+@-webkit-keyframes hover{
+0%{border-bottom: 2px solid #748978;}
+20%{border-bottom: 2px solid #6A9372;}
+40%{border-bottom: 2px solid #51AC63;}
+60%{border-bottom: 2px solid #2DD04D;}
+80%{border-bottom: 2px solid #25D848;}
+100%{border-bottom: 2px solid #14E942;}
+}
+
+/* NON-WEBKIT */
+@keyframes UNHover {
+0%{border-bottom: 2px solid #14E942;}
+20%{border-bottom: 2px solid #25D848;}
+40%{border-bottom: 2px solid #2DD04D;}
+60%{border-bottom: 2px solid #51AC63;}
+80%{border-bottom: 2px solid #6A9372;}
+100%{border-bottom: 2px solid #748978;} 
+}
+/*SAFARI AND CHROME*/
+@-webkit-keyframes UNHover{
+0%{border-bottom: 2px solid #14E942;}
+20%{border-bottom: 2px solid #25D848;}
+40%{border-bottom: 2px solid #2DD04D;}
+60%{border-bottom: 2px solid #51AC63;}
+80%{border-bottom: 2px solid #6A9372;}
+100%{border-bottom: 2px solid #748978;} 
+}

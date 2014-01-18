@@ -81,3 +81,58 @@ img.logo {
 }
 
 /*END NAV STLYES*/
+
+/*ELEMENTS*/
+
+/*The very pretty ZerytButton! Complete with animations*/
+button.zerytButton {
+/* Text stuff */
+color:#ffffff;
+background:#41494C;
+/*Unbuttonisation*/
+border: 0;
+outline: none; 
+/* Box */
+line-height: 26px;
+/*border-top: 2px solid #888A83;*/
+border-bottom: 2px solid #748978;
+/*border-left: 2px solid #888A83;
+border-right: 2px solid #888A83;*/
+box-shadow: 0px 1px 5px 0px #000000;
+padding-top: 2px;
+padding-bottom: 2px;
+padding-left: 8px;
+padding-right: 8px;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+.zerytButton:hover{
+/*Style changes*/
+border-bottom: 2px solid #14E942;
+cursor: pointer;
+outline: 0;
+/* ANIMATION */
+animation-name: hover;
+animation-duration: 0.25s;
+animation-timing-function: linear;
+animation-iteration-count: 1;
+animation-play-state: running;
+/* Safari and Chrome: */
+-webkit-animation-name: hover;
+-webkit-animation-duration: 0.25s;
+-webkit-animation-timing-function: linear;
+-webkit-animation-iteration-count: 1;
+-webkit-animation-play-state: running;
+}
+.zerytButton:active {
+/*Style changes*/
+border-bottom: 2px solid #14E942;
+cursor: pointer;
+box-shadow: 0px 0px 2px 0px #000000;
+/*Unbuttonisation*/
+outline: 0;
+}
+.zerytButton:visited {
+/*Unbuttonisation*/
+outline: none; 
+}
