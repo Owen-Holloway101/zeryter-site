@@ -1,8 +1,10 @@
 <?php
 
+/*
 ini_set('display_errors',1);
 ini_set('display_startup_errors',1);
 error_reporting(-1);
+*/
 
 function userExists($user) {
 
@@ -61,16 +63,23 @@ function insertNewUser($user, $pass) {
 	$stmt->execute();
 
 }
-
-echo $_COOKIE["newUser"]."<br>";
-echo $_COOKIE["newPass"]."<br>";
-
-if (userExists($_COOKIE["newUser"])) {
-	echo "user exists";
+if(isset($_COOKIE["newUser"])) { 
+	if (userExists($_COOKIE["newUser"])) {
+		setcookie("newUser", "", time()-3600);
+		setcookie("newPass", "", time()-3600);
+		setcookie("userStatus", "user exists",time()+3600);
+	} else {
+		insertNewUser($_COOKIE["newUser"],$_COOKIE["newPass"]);
+		setcookie("newUser", "", time()-3600);
+		setcookie("newPass", "", time()-3600);
+		setcookie("userStatus", "user exists",time()+3600);
+	}
 } else {
-	insertNewUser($_COOKIE["newUser"],$_COOKIE["newPass"]);
-	setcookie("newUser", "", time()-3600);
-	setcookie("newPass", "", time()-3600);
-	echo "user created";
+	setcookie("userStatus", "user exists",time()+3600);
 }
 ?>
+<html>
+<script type="text/javascript">
+	window.location.href="newUser.php"
+</script>
+</html>

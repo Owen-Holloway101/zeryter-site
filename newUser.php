@@ -24,10 +24,21 @@ require 'db/userConnect.php';
 
 <body>
 	<div class="content">
+	<?php 
+	if (isset($_COOKIE["userStatus"])) {
+
+		echo $_COOKIE["userStatus"];
+		setcookie("userStatus", "",time()-3600);
+		
+	} else {
+		echo '
 		<input class="zerytInput" /*           */ name="user" placeholder="Username" /* */ id="username" /**/></input><br>
 		<input class="zerytInput" type="password" name="pass" placeholder="Password" /* */ id="password" /**/></input><br>
 		<input class="zerytInput" type="password" name="pass" placeholder="Password Again" id="passwordCheck"></input><br>
 		<span  class="zerytButtonFlat" style="display: inline-block; magin-left: 10px;" onClick=createUser()>Create User</span>
+		';
+	}
+	?>
 	</div>
 </body>
 
