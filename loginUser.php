@@ -1,6 +1,5 @@
 <?php
 require 'nav.php';
-require 'db/userConnect.php';
 ?>
 <html>
 
@@ -13,6 +12,10 @@ require 'db/userConnect.php';
 		console.log(user);
 		var pass = $("input#password").val();
 		console.log(pass);
+		var expDate = new Date();
+		expDate.setTime(expDate.getTime()+(60*60)); //set to an hour from Now
+		document.cookie="user=" + user + ";" + expDate;
+		document.cookie="pass=" + pass + ";" + expDate;
 	}
 	</script>
 </head>
