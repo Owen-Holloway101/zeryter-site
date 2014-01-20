@@ -69,8 +69,8 @@ if (userExists($_COOKIE["newUser"])) {
 	echo "user exists";
 } else {
 	insertNewUser($_COOKIE["newUser"],$_COOKIE["newPass"]);
-	//setcookie("newUser", "", time()-3600);
-	//setcookie("newPass", "", time()-3600);
+	setcookie("newUser", "", time()-3600);
+	setcookie("newPass", "", time()-3600);
 	echo "user created";
 }
 ?>
