@@ -1,6 +1,6 @@
 <?php
 
-include "db/connect.php";
+include "db/userConnect.php";
 
 $query = "SELECT UNAME, SPASS, SALT FROM USERS";
 
