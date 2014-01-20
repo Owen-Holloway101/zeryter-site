@@ -4,9 +4,21 @@ require 'nav.php';
 
 <html>
 
+<head>
+	<title>Home - Zeryter.tk</title>
+</head>
+
 <body>
+
+	<div class="sidebar">
+		<span class="zerytButton" style="width: calc(100% - 16px); line-height: 20px; display: inline-block;" onclick="location.href='https://plus.google.com/+OwenHolloway'">Google+</span><br>
+		<span class="zerytButton" style="width: calc(100% - 16px); line-height: 20px; display: inline-block;" onclick="location.href='https://github.com/owen-holloway101'">GitHub</span><br>
+	</div>
+
 	<div class="content">
-		This is more test text
+		You have landed on zeryter.tk<br>
+		<br>
+		Welcome to my corner of the internet!
 	</div>
 </body>
 
