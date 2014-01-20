@@ -72,10 +72,10 @@ if(isset($_COOKIE["newUser"])) {
 		insertNewUser($_COOKIE["newUser"],$_COOKIE["newPass"]);
 		setcookie("newUser", "", time()-3600);
 		setcookie("newPass", "", time()-3600);
-		setcookie("userStatus", "user exists",time()+3600);
+		setcookie("userStatus", "user created",time()+3600);
 	}
 } else {
-	setcookie("userStatus", "user exists",time()+3600);
+	setcookie("userStatus", "You need to give me data ....",time()+3600);
 }
 ?>
 <html>
