@@ -33,12 +33,11 @@ function userExists($user) {
 	$stmt->close();
 
 		if ($userExists) {
-		return True;
-	} else {
-		return False;
-	}	
-}
-
+			return True;
+		} else {
+			return False;
+		}	
+	}
 }
 
 function insertNewUser($user, $pass) {

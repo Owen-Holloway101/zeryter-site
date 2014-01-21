@@ -16,15 +16,27 @@ require 'nav.php';
 		expDate.setTime(expDate.getTime()+(60*60)); //set to an hour from Now
 		document.cookie="user=" + user + ";" + expDate;
 		document.cookie="pass=" + pass + ";" + expDate;
+		window.location.href="login.php";
 	}
 	</script>
 </head>
 
 <body>
 	<div class="content">
+	<?php
+	if (isset($_COOKIE["loginStatus"])) {
+
+		echo $_COOKIE["loginStatus"];
+		setcookie("loginStatus", "",time()-3600);
+		
+	} else {
+		echo '
 		<input class="zerytInput" /*           */ name="user" placeholder="Username" id="username"></input><br>
 		<input class="zerytInput" type="password" name="pass" placeholder="Password" id="password"></input><br>
 		<span  class="zerytButtonFlat" style="display: inline-block; magin-left: 10px;" onClick=login()>Login</span>
+		';
+	}
+	?>
 	</div>
 </body>
 
