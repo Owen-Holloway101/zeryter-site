@@ -13,7 +13,7 @@ require 'nav.php';
 		var pass = $("input#password").val();
 		console.log(pass);
 		var expDate = new Date();
-		expDate.setTime(expDate.getTime()+(60*60)); //set to an hour from Now
+		expDate.setTime(expDate.getTime()+(60*15)); //set to an 1/4 hour from Now
 		document.cookie="user=" + user + ";" + expDate;
 		document.cookie="pass=" + pass + ";" + expDate;
 		window.location.href="login.php";

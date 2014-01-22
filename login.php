@@ -1,10 +1,10 @@
 <?php
 
-
+/*
 ini_set('display_errors',1);
 ini_set('display_startup_errors',1);
 error_reporting(-1);
-
+*/
 
 function userExists($user) {
 
@@ -87,6 +87,36 @@ function checkSalt($user, $pass) {
 	}
 }
 
+function setSession($user, $sessionID) {
+	
+	require 'passwords.private';
+
+	try {
+	$dbh = new PDO("mysql:host=127.0.0.1;dbname=LOGIN", "root", $sqlPass);
+	} catch (PDOException $e) {
+		echo 'Connection failed: ' . $e->getMessage();
+	}
+
+	//Prepared statements make sure that we don't fail and have sql injection ...
+	$stmt = $dbh->prepare("UPDATE `SESSION` SET ID=:sessionID WHERE USER=:user");
+
+	$stmt->bindParam(':user', $user);
+	$stmt->bindParam(':sessionID', $sessionID);
+
+	$stmt->execute();
+
+}
+
+function generateSessionID() {
+	$length = 32;
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, strlen($characters) - 1)];
+    }
+    return $randomString;
+}
+
 $user = $_COOKIE["user"];
 $pass = $_COOKIE["pass"];
 
@@ -96,6 +126,11 @@ if (userExists($user)) {
 
 if ($passAccepted) {
 	setcookie("loginStatus", "pass correct",time()+3600);
+	$newSessionID = generateSessionID();
+	//Save session into the DB
+	setSession($user,$newSessionID);
+	//Set to expire in a day from now (now being whenever the session is handed out)
+	setcookie("sessionID",$newSessionID,time()+86400);
 } else {
 	setcookie("loginStatus", "User does not exist or pass incorrect",time()+3600);
 };

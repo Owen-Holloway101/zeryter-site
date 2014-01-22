@@ -1,10 +1,10 @@
 <?php
 
-/*
+
 ini_set('display_errors',1);
 ini_set('display_startup_errors',1);
 error_reporting(-1);
-*/
+
 
 function userExists($user) {
 
@@ -58,6 +58,16 @@ function insertNewUser($user, $pass) {
 
 	$stmt->bindParam(':user', $user);
 	$stmt->bindParam(':saltedPass', $passHash);
+
+	$stmt->execute();
+
+	//Prepared statements make sure that we don't fail and have sql injection ...
+	$stmt = $dbh->prepare("INSERT INTO `SESSION` (`ID`, `USER`) VALUES (:id, :user)");
+
+	$dummySession = "0000000000000000000000000000000";
+
+	$stmt->bindParam(':id', $dummySession);
+	$stmt->bindParam(':user', $user);
 
 	$stmt->execute();
 
