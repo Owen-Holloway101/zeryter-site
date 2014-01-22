@@ -11,8 +11,8 @@ require 'nav.php';
 <body>
 
 	<div class="sidebar">
-		<span class="zerytButtonFlat" style="width: calc(100% - 18px); line-height: 20px; display: inline-block;" onclick="location.href='https://plus.google.com/+OwenHolloway'">Google+</span><br>
-		<span class="zerytButtonFlat" style="width: calc(100% - 18px); line-height: 20px; display: inline-block;" onclick="location.href='https://github.com/owen-holloway101'">GitHub</span><br>
+		<span class="zerytButtonFlat" style="width: calc(100% - 20px); line-height: 20px; display: inline-block;" onclick="location.href='https://plus.google.com/+OwenHolloway'">Google+</span><br>
+		<span class="zerytButtonFlat" style="width: calc(100% - 20px); line-height: 20px; display: inline-block;" onclick="location.href='https://github.com/owen-holloway101'">GitHub</span><br>
 	</div>
 
 	<div class="content">

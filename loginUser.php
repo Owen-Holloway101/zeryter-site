@@ -28,10 +28,29 @@ require 'nav.php';
 
 		echo $_COOKIE["loginStatus"];
 		setcookie("loginStatus", "",time()-3600);
+
+		echo "
+		<script type='text/javascript'>
+		$(document).keypress(function(e) {
+		if(e.which == 13) {
+				console.log('Logging in');
+				window.location.href='/';
+			}
+		});
+		</script>
+	";
 		
 	} else {
 		echo '
-		<input class="zerytInput" /*           */ name="user" placeholder="Username" id="username"></input><br>
+		<script type="text/javascript">
+		$(document).keypress(function(e) {
+			if(e.which == 13) {
+				console.log("Logging in");
+				login();
+			}
+		});
+		</script>
+		<input class="zerytInput" /*	   */ name="user" placeholder="Username" id="username"></input><br>
 		<input class="zerytInput" type="password" name="pass" placeholder="Password" id="password"></input><br>
 		<span  class="zerytButtonFlat" style="display: inline-block; magin-left: 10px;" onClick=login()>Login</span>
 		';
