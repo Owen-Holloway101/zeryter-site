@@ -1,8 +1,10 @@
 <?php
 
+/*
 ini_set('display_errors',1);
 ini_set('display_startup_errors',1);
 error_reporting(-1);
+*/
 
 $userPermission = 0;
 
@@ -58,7 +60,6 @@ function getUserPermission($user) {
 		/* fetch values */
 		while ($stmt->fetch()) {
 			if ($uname == $user) {
-				echo $permissionFromDB."<br>";
 				$userPermission = $permissionFromDB;
 			}				
 		}
@@ -73,7 +74,7 @@ function getUserPermission($user) {
 
 $userPermission = getUserPermission($userName);
 
-echo $userName."<br>";
-echo $userPermission."<br>";
+//echo $userName."<br>";
+//echo $userPermission."<br>";
 
 ?>

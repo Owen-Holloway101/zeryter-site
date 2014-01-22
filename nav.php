@@ -1,5 +1,7 @@
 <!--Owen Holloway Zeryt 2014-->
-<!--<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>-->
+<?php
+require 'session.php';
+?>
 <head>
 	<link rel="stylesheet" type="text/css" href="/mainStyles.css">
 	<link rel="shortcut icon" href="/assets/zeryt.ico" >
@@ -13,4 +15,14 @@
 		<span onclick="location.href='/thoughtStream.php'"class="zerytButtonFlat">Thought Stream</span>
 		<t> &#160;&#160;&#160;&#160;&#160;&#160;&#160; Zeryter: that one guy that does stuff on the internet</t>
 	</div>
+	<?php
+	if ($userName != "null") {
+		echo "
+		<div class='loginInfo'>";
+		echo $userName;
+		echo "
+		</div>
+		";
+	}
+	?>
 </body>
