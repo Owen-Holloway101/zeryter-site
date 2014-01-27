@@ -13,7 +13,8 @@ require 'session.php';
 		<span onclick="location.href='/'" class="zerytButtonFlat">Home</span>
 		<span onclick="location.href='/about.php'" class="zerytButtonFlat">About</span>
 		<span onclick="location.href='/thoughtStream.php'"class="zerytButtonFlat">Thought Stream</span>
-		<t> &#160;&#160;&#160;&#160;&#160;&#160;&#160; Zeryter: that one guy that does stuff on the internet</t>
+		<!--*yawn* lazy padding is lazy-->
+		<t> &#160;&#160; Zeryter: that one guy that does stuff on the internet</t>
 	</div>
 	<?php
 	if ($userName != "null") {

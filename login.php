@@ -150,6 +150,11 @@ if (password_verify($pass, $passHash)) {
     echo 'Invalid password.';
 }
 */
+
+//Lets get rid of those cookies
+setcookie("user","",time()-36000);
+setcookie("pass","",time()-36000);
+
 ?>
 
 <html>

@@ -1,4 +1,17 @@
 <?php
+if(preg_match('/MSIE/',$_SERVER['HTTP_USER_AGENT']))
+{
+    header("Location: iepage.html");
+    die();
+}
+else
+{
+    // if IE>8
+    //Nothing to see here .....
+}
+?>
+
+<?php
 require 'nav.php';
 ?>
 
