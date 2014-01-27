@@ -6,7 +6,7 @@ if(preg_match('/MSIE/',$_SERVER['HTTP_USER_AGENT']))
 }
 else
 {
-    // if IE>8
+    // if IE=>11
     //Nothing to see here .....
 }
 ?>
