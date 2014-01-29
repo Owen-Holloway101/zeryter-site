@@ -31,6 +31,7 @@ div.content {
 	/*box*/
 	padding: 10px;
 	border: 4px solid #3D4548;
+	margin-bottom: 6px;
 	width: 80%;
 	margin-left: 15%;
 	margin-right: 5%;
@@ -285,4 +286,41 @@ textarea.zerytTextArea:active{
 textarea.zerytTextArea:focus{
 	border-bottom: 4px solid #F9A23C;
 	outline: 0;
+}
+
+/*Scrollbars*/
+
+::-webkit-scrollbar {
+    width: 13px;
+    background: #2E3436;
+    -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.5); 
+
+}
+::-webkit-scrollbar-button       {
+	visibility: visible;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background: #454E51; 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-track-piece  {}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.5); 
+    background-color: #9AAA9F;
+}
+
+::-webkit-scrollbar-thumb:active {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.5);
+    background-color: #C5CDC7;
+}
+
+::-webkit-scrollbar-corner       {
+	background-image: url(http://zeryter.tk:8080/assets/corner_scroll.png);
+}
+::-webkit-resizer                {
+	background-image: url(http://zeryter.tk:8080/assets/corner.png);
 }
