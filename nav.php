@@ -1,6 +1,7 @@
 <!--Owen Holloway Zeryt 2014-->
 <?php
 require 'session.php';
+error_reporting(0);
 ?>
 <head>
 	<link rel="stylesheet" type="text/css" href="/mainStyles.css">

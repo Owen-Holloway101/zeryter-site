@@ -1,10 +1,10 @@
 <?php
 
-
+/*
 ini_set('display_errors',1);
 ini_set('display_startup_errors',1);
 error_reporting(-1);
-
+*/
 
 function userExists($user) {
 
@@ -43,6 +43,7 @@ function userExists($user) {
 function insertNewUser($user, $pass) {
 	
 	require 'passwords.private';
+	//require 'password_compact/lib/password.php';
 
 	try {
 	$dbh = new PDO("mysql:host=127.0.0.1;dbname=LOGIN", "root", $sqlPass);

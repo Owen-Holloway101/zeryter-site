@@ -45,7 +45,7 @@ function userExists($user) {
 function checkSalt($user, $pass) {
 
 	include 'db/userConnect.php';
-
+	//require 'password_compact/lib/password.php';
 	
 
 	$sPassFound = False;
