@@ -6,7 +6,7 @@ ini_set('display_startup_errors',1);
 error_reporting(-1);
 */
 //inits the variable $db with the connection to the server
-require 'passwords.private';
+require $_SERVER["DOCUMENT_ROOT"].'/passwords.private';
 $db = new mysqli('127.0.0.1','root',$sqlPass,'LOGIN');
 /*
 if($db->connect_errno > 0) {

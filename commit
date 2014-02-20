@@ -2,15 +2,15 @@
 git ls-files --deleted | xargs git rm
 
 #add files to stage with patterns
-find . -name '*.php' | xargs git add
-find . -name '*.html' | xargs git add
-find . -name '*.png' | xargs git add
-find . -name '*.jpg' | xargs git add
-find . -name '*.ico' | xargs git add
-find . -name '*.md' | xargs git add
-find . -name '*.css' | xargs git add
-find . -name '*.ttf' | xargs git add
-find . -name '*.txt' | xargs git add
+find . -o \( -wholename './thisbluepebble' -prune \) -o -name '*.php' -print | xargs git add
+find . -o \( -wholename './thisbluepebble' -prune \) -o -name '*.html' -print | xargs git add
+find . -o \( -wholename './thisbluepebble' -prune \) -o -name '*.png' -print | xargs git add
+find . -o \( -wholename './thisbluepebble' -prune \) -o -name '*.jpg' -print | xargs git add
+find . -o \( -wholename './thisbluepebble' -prune \) -o -name '*.ico' -print | xargs git add
+find . -o \( -wholename './thisbluepebble' -prune \) -o -name '*.md' -print | xargs git add
+find . -o \( -wholename './thisbluepebble' -prune \) -o -name '*.css' -print | xargs git add
+find . -o \( -wholename './thisbluepebble' -prune \) -o -name '*.ttf' -print | xargs git add
+find . -o \( -wholename './thisbluepebble' -prune \) -o -name '*.txt' -print | xargs git add
 
 #commit changes
 git commit

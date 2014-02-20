@@ -33,7 +33,6 @@ require 'nav.php';
 		<br>
 		Welcome to my corner of the internet!
 	</div>
-
 </body>
 
 </html>
