@@ -31,7 +31,10 @@ require 'nav.php';
 	<div class="content">
 		You have landed on zeryter.tk<br>
 		<br>
-		Welcome to my corner of the internet!
+		Welcome to my corner of the internet!<br>
+		<br>
+		I am Zeryter, gamer, coder and ocassional thinker. I made this website because boredom is best killed with creation.<br>
+		This site also has hidden sections, if you know me well enough to find them enjoy!
 	</div>
 </body>
 
