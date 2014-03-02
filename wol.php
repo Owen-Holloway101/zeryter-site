@@ -1,5 +1,5 @@
 <?php
-require $_SERVER['DOCUMENT_ROOT'].'session.php';
+require $_SERVER['DOCUMENT_ROOT'].'/session.php';
 
 function wol($broadcast, $mac)
 {

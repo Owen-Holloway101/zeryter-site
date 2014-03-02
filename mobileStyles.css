@@ -1,0 +1,29 @@
+/*This class over rides elements for mobile*/
+
+body {
+	margin-top: 12%;
+	font-size: 20px;
+}
+
+div.nav {
+	height: 7.5%;
+	line-height: 500%;
+}
+
+div.content {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+div.sidebar {
+	display:none;
+}
+
+span.zerytButtonFlat { 
+	height: 1005;
+}
+
+t {
+	display: none;
+}

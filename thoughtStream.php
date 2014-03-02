@@ -3,10 +3,11 @@ require 'nav.php';
 
 function displayPosts() {
 
-	require 'passwords.private';
+	require $_SERVER["DOCUMENT_ROOT"].'/passwords.private';
 	$db = new mysqli('127.0.0.1','root',$sqlPass,'POST');
 
 	$posts = array();
+	$posts = null;
 
 	$query = "SELECT POSTNO,POSTDATA FROM thoughtStream";
 
@@ -20,14 +21,16 @@ function displayPosts() {
 
 		/* fetch values */
 		while ($stmt->fetch()) {
-			array_push($posts,$postData);
+			 $posts[$postNo] = $postData;
 		}
 	}
-
-	for ($i=sizeof($posts) - 1; $i > -1; $i--) { 
-		echo "<div class='content'>";
-		echo $posts[$i];
-		echo "</div>";
+	//the sizeof($posts) + int, int is due to some posts being deleted in the first few posts so it does not start at 0 and got through to x uniformly 
+	for ($i=sizeof($posts) + 100; $i > -1; $i--) { 
+			if (!$posts[$i] == null) {
+			echo "<div class='content'>";
+			echo $posts[$i];
+			echo "</div>";
+		}
 	}
 }
 

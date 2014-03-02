@@ -1,17 +1,11 @@
 <!--Owen Holloway Zeryt 2014-->
 <?php
-require 'session.php';
-error_reporting(-1);
-
-/*======= Useful functions! ===========*/
-
-/* USER-AGENTS (stackoverflow iamandrus)*/
-function isMobile() {
-    return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
-}
+require $_SERVER["DOCUMENT_ROOT"].'/session.php';
+error_reporting(0);
 ?>
 <head>
 	<link rel="stylesheet" type="text/css" href="/mainStyles.css">
+	<!--<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 800px)" href="mobileStyles.css" />-->
 	<link rel="shortcut icon" href="/assets/zeryt.ico">
 </head>
 
@@ -25,7 +19,7 @@ function isMobile() {
 		<t> &#160;&#160; Zeryter: that one guy that does stuff on the internet</t>
 	</div>
 	<?php
-	return $_SERVER["HTTP_USER_AGENT"];
+	//return $_SERVER["HTTP_USER_AGENT"];
 	if ($userName != "null") {
 		echo "
 		<div class='loginInfo'>";
