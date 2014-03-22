@@ -29,13 +29,6 @@ require 'nav.php';
 	</div>
 
 	<div class="content">
-		<h3>Exams are over!</h3>
-		<t>I am now free to code, create and game to my hearts desire. Which is pretty awesome! I will start by setting up some cool things on this website, what exactly I cannot say. </t><br>
-		<br>
-		<t>Welcome to zeryter.tk, this is a small personal site, I mostly use it to learn how to web design. This is about the 4th redesign in as many months so if will probably change. However at the moment I really like it so maybe it won't.</t>
-	</div>
-
-	<div class="content">
 		<h3>A shiny new server!</h3>
 		<br>
 		<t>I have a new server for this site! Its a Samsung GT-i9000 (aka a Samsung Galaxy S I) it served me well as a phone for a good 2 years but it can longer take calls so I have moved it on to a new purpose. As for the old server (iPod touch 2g MC) its back in the box and powered off. This new server was also a pain in the arse to get going ....</t>
