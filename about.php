@@ -23,7 +23,7 @@ require 'nav.php';
 
 	<div class="content">
 		<h3>Services also hosted on this address</h3>
-		<li>Mumble server (under development) [wake that WIP]</li>
+		<li>Mumble server is no longer under development, if you want it up talk to one of the mods.</li>
 		<li>Minecraft server (under development) [very very WIP]</li>
 		<br>
 	</div>
