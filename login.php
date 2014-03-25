@@ -130,7 +130,7 @@ if ($passAccepted) {
 	//Save session into the DB
 	setSession($user,$newSessionID);
 	//Set to expire in a day from now (now being whenever the session is handed out)
-	setcookie("sessionID",$newSessionID,time()+86400);
+	setcookie("sessionID",$newSessionID,time()+1209600); //session is set to expire in 2 weeks from now
 } else {
 	setcookie("loginStatus", "User does not exist or pass incorrect",time()+3600);
 };
