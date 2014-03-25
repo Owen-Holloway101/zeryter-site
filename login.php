@@ -125,7 +125,7 @@ if (userExists($user)) {
 }
 
 if ($passAccepted) {
-	setcookie("loginStatus", "pass correct",time()+3600);
+	setcookie("loginStatus", "pass correct, logged in",time()+3600);
 	$newSessionID = generateSessionID();
 	//Save session into the DB
 	setSession($user,$newSessionID);

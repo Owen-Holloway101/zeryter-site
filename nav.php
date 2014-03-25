@@ -27,11 +27,13 @@ error_reporting(0);
 	</div>
 	<?php
 	//return $_SERVER["HTTP_USER_AGENT"];
+	if ($userName != "null") {
 		echo "
 		<div class='loginInfo'>";
-		echo $userName;
+		echo "<a style='color: #ffffff; text-decoration: none' href='/logout.php'>".$userName."<a/>";
 		echo "
 		</div>
 		";
+	}
 	?>
 </body>
