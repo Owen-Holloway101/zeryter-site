@@ -38,10 +38,16 @@ function wol($broadcast, $mac)
     }
 }
 
-if ($userPermission >= 90) {
+if ($userPermission >= 60) {
 		wol("255.255.255.255","00:21:97:a2:41:43");
 		echo "PACKET SENT";
 	} else {
 		echo "Check your privilege";
 	}
 ?>
+
+<html>
+<script type="text/javascript">
+    window.location.href="/"
+</script>
+</html>
