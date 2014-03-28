@@ -9,9 +9,11 @@ error_reporting(0);
 
 $userPermission = 0;
 
+require $_SERVER["DOCUMENT_ROOT"].'/password_compact/lib/password.php';
+
 function getUserName($sessionID) {
 
-	include 'db/userConnect.php';
+	include $_SERVER["DOCUMENT_ROOT"].'/db/userConnect.php';
 
 	$user = "null";
 
@@ -44,7 +46,7 @@ $userName = getUserName($_COOKIE["sessionID"]);
 
 function getUserPermission($user) {
 
-	include 'db/userConnect.php';
+	include $_SERVER["DOCUMENT_ROOT"].'/db/userConnect.php';
 
 	$userPermission = 0;
 

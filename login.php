@@ -6,9 +6,11 @@ ini_set('display_startup_errors',1);
 error_reporting(-1);
 */
 
+require $_SERVER["DOCUMENT_ROOT"].'/password_compact/lib/password.php';
+
 function userExists($user) {
 
-	include 'db/userConnect.php';
+	include $_SERVER["DOCUMENT_ROOT"].'/db/userConnect.php';
 
 	$userExists = False;
 
@@ -44,7 +46,7 @@ function userExists($user) {
 
 function checkSalt($user, $pass) {
 
-	include 'db/userConnect.php';
+	include $_SERVER["DOCUMENT_ROOT"].'/db/userConnect.php';
 	//require 'password_compact/lib/password.php';
 	
 
@@ -89,7 +91,7 @@ function checkSalt($user, $pass) {
 
 function setSession($user, $sessionID) {
 	
-	require 'passwords.private';
+	require $_SERVER["DOCUMENT_ROOT"].'/passwords.private';
 
 	try {
 	$dbh = new PDO("mysql:host=127.0.0.1;dbname=LOGIN", "root", $sqlPass);
