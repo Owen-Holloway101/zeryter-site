@@ -1,5 +1,6 @@
 <?php
 require 'nav.php';
+include $_SERVER['DOCUMENT_ROOT'].'/passwords.private';
 ?>
 <html>
 
@@ -25,6 +26,12 @@ require 'nav.php';
 		<h3>Services also hosted on this address</h3>
 		<li>Mumble server is no longer under development, if you want it up talk to one of the mods.</li>
 		<li>Minecraft server (under development) [very very WIP]</li>
+		<?php
+		if ($userPermission >= 60) {
+			echo "<br><br>Info for mods:";
+			echo "<li>Server login: minecraft@zeryter.tk (port 22), the password is:".$minecraftPass."</li>";
+		}
+		?>
 		<br>
 	</div>
 
