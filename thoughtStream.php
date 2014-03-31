@@ -61,6 +61,11 @@ function displayPosts() {
 	<div class="sidebar">
 		<span class="zerytButtonFlat" style="width: calc(100% - 20px); line-height: 20px; display: inline-block;" onclick="location.href='https://plus.google.com/+OwenHolloway'">Google+</span><br>
 		<span class="zerytButtonFlat" style="width: calc(100% - 20px); line-height: 20px; display: inline-block;" onclick="location.href='https://github.com/owen-holloway101'">GitHub</span><br>
+		<?php
+		if ($userPermission >= 60) {
+			echo "<span class=\"zerytButtonFlat\" style=\"width: calc(100% - 20px); line-height: 20px; display: inline-block;\" onclick=\"location.href='/wol.php'\">WOL</span><br>";
+		}
+		?>
 	</div>
 	<?php
 	if ($userPermission >= 90) {

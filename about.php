@@ -1,6 +1,5 @@
 <?php
 require 'nav.php';
-include $_SERVER['DOCUMENT_ROOT'].'/passwords.private';
 ?>
 <html>
 
@@ -12,6 +11,11 @@ include $_SERVER['DOCUMENT_ROOT'].'/passwords.private';
 	<div class="sidebar">
 		<span class="zerytButtonFlat" style="width: calc(100% - 20px); line-height: 20px; display: inline-block;" onclick="location.href='https://plus.google.com/+OwenHolloway'">Google+</span><br>
 		<span class="zerytButtonFlat" style="width: calc(100% - 20px); line-height: 20px; display: inline-block;" onclick="location.href='https://github.com/owen-holloway101'">GitHub</span><br>
+		<?php
+		if ($userPermission >= 60) {
+			echo "<span class=\"zerytButtonFlat\" style=\"width: calc(100% - 20px); line-height: 20px; display: inline-block;\" onclick=\"location.href='/wol.php'\">WOL</span><br>";
+		}
+		?>
 	</div>
 	<div class="content">
 		<h3>True Facts About This Website</h3>
@@ -25,13 +29,7 @@ include $_SERVER['DOCUMENT_ROOT'].'/passwords.private';
 	<div class="content">
 		<h3>Services also hosted on this address</h3>
 		<li>Mumble server is no longer under development, if you want it up talk to one of the mods.</li>
-		<li>Minecraft server (under development) [very very WIP]</li>
-		<?php
-		if ($userPermission >= 60) {
-			echo "<br><br>Info for mods:";
-			echo "<li>Server login: minecraft@zeryter.tk (port 22), the password is:".$minecraftPass."</li>";
-		}
-		?>
+		<li>Minecraft server (under development)</li>
 		<br>
 	</div>
 

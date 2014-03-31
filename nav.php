@@ -15,13 +15,11 @@ error_reporting(0);
 		<span onclick="location.href='/'" class="zerytButtonFlat">Home</span>
 		<span onclick="location.href='/about.php'" class="zerytButtonFlat">About</span>
 		<span onclick="location.href='/thoughtStream.php'"class="zerytButtonFlat">Thought Stream</span>
-
 		<?php
-		if ($userPermission >= 60) {
-				echo "<span onclick=location.href='/wol.php' class='zerytButtonFlat'>WOL</span>";
+			if ($userPermission >= 60) {
+				echo "<span onclick=location.href='/mods.php' class='zerytButtonFlat'>Mods-page</span>";
 			}
 		?>
-
 		<!--*yawn* lazy padding is lazy-->
 		<t> &#160;&#160; Zeryter: that one guy that does stuff on the internet</t>
 	</div>
