@@ -22,7 +22,7 @@ require 'passwords.private';
 <div class="content">
 	<?php
 		if ($userPermission >= 60) {
-			echo "<br><br>Info for mods:";
+			echo "<h3>Info for mods:</h3>";
 			echo "<li>Server login: minecraft@zeryter.tk (port 22), the password is: ".$minecraftPass."</li>";
 			echo "<li>'screen -x' will bring up the minecraft console, <u>do not</u> change config files without stopping the server first.</li>";
 			echo "<li>To bring the server back up run 'screen -d -m ./minecraftCommand <- WIP'";
@@ -31,5 +31,21 @@ require 'passwords.private';
 		}
 	?>
 </div>
+
+<?php
+if ($userPermission >= 60) {
+	echo 
+	"<div class=\"content\">
+	<h3>shutdown procedure</h3>
+	<li>login to server over ssh (putty)</li>
+	<li>wait for \"minecraft@zeryter.tk:~$\" to display</li>
+	<li>type in \"sudo shutdown -h now\"</li>
+	<li>press enter</li>
+	<li>type in the minecraft user password again and press enter</li>
+	<br>
+	The server is now powering down, please be aware of other users when you execute this command.
+	</div>";
+}
+?>
 
 </body>

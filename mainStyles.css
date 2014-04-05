@@ -319,8 +319,8 @@ textarea.zerytTextArea:focus{
 }
 
 ::-webkit-scrollbar-corner       {
-	background-image: url(http://zeryter.tk:8080/assets/corner_scroll.png);
+	background-image: url(http://zeryter.tk/assets/corner_scroll.png);
 }
 ::-webkit-resizer                {
-	background-image: url(http://zeryter.tk:8080/assets/corner.png);
+	background-image: url(http://zeryter.tk/assets/corner.png);
 }
