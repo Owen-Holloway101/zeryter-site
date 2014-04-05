@@ -23,7 +23,7 @@ require 'passwords.private';
 	<?php
 		if ($userPermission >= 60) {
 			echo "<h3>Info for mods:</h3>";
-			echo "<li>Server login: minecraft@zeryter.tk (port 22), the password is: ".$minecraftPass."</li>";
+			echo "<li>Server login: minecraft@zeryter.tk (port 22), the password is: <t class=\"sensistive\">".$minecraftPass."</t></li>";
 			echo "<li>'screen -x' will bring up the minecraft console, <u>do not</u> change config files without stopping the server first.</li>";
 			echo "<li>To bring the server back up run 'screen -d -m ./minecraftCommand <- WIP'";
 		} else {
