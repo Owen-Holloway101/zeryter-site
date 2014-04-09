@@ -132,35 +132,42 @@ function setSession($user, $sessionID) {
 
 function checkSession() {
 	
+	//test code .... I am leaving this here as example code, why beucause I bloody feel like it thats why
 	/*
-	require $_SERVER["DOCUMENT_ROOT"].'/passwords.private';
-	
-	try {
-	$dbh = new PDO("mysql:host=127.0.0.1;dbname=LOGIN", "root", $sqlPass);
-	} catch (PDOException $e) {
-		echo 'Connection failed: ' . $e->getMessage();
-	}
-	*/
 	include $_SERVER["DOCUMENT_ROOT"].'/db/userConnect.php';
 
 	$runs = 0;
 
-	$query = "SELECT DATECREATED FROM SESSION";
+	$query = "SELECT TIMESTAMPDIFF(HOUR,TIMECREATED,NOW()) FROM SESSION";
 
 	//Prepared statements make sure that we don't fail and have sql injection ...
 	if ($stmt = $db->prepare($query)) {
 		$stmt->execute();
-		$stmt->bind_result($dateCreated);
+		$stmt->bind_result($dateDiff);
 
-		/* fetch values */
+		// fetch values 
 		while ($stmt->fetch()) {
-			setcookie("dateCreated".$runs, $dateCreated,time()+3600);
+			echo($dateDiff."<br>");
 			$runs++;
 		}
 		
 		$stmt->close();
 
 	}
+	*/
+
+	require $_SERVER["DOCUMENT_ROOT"].'/passwords.private';
+
+	try {
+	$dbh = new PDO("mysql:host=127.0.0.1;dbname=LOGIN", "root", $sqlPass);
+	} catch (PDOException $e) {
+		echo 'Connection failed: ' . $e->getMessage();
+	}
+
+	//Prepared statements make sure that we don't fail and have sql injection ...
+	$stmt = $dbh->prepare("DELETE FROM SESSION WHERE TIMESTAMPDIFF(HOUR,TIMECREATED,NOW())>336");
+
+	$stmt->execute();
 
 }
 
@@ -210,13 +217,14 @@ if (password_verify($pass, $passHash)) {
 }
 */
 
-//Lets get rid of those cookies
+//Lets get rid of those () cookies
 setcookie("user","",time()-36000);
 setcookie("pass","",time()-36000);
 
 ?>
 
 <html>
+<!---->
 <script type="text/javascript">
 	window.location.href="loginUser.php"
 </script>
