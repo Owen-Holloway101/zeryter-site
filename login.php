@@ -6,6 +6,27 @@ ini_set('display_startup_errors',1);
 error_reporting(-1);
 */
 
+function deleteSession($sessionID) {
+	
+	require $_SERVER["DOCUMENT_ROOT"].'/passwords.private';
+
+	try {
+	$dbh = new PDO("mysql:host=127.0.0.1;dbname=LOGIN", "root", $sqlPass);
+	} catch (PDOException $e) {
+		echo 'Connection failed: ' . $e->getMessage();
+	}
+
+	//Prepared statements make sure that we don't fail and have sql injection ...
+	$stmt = $dbh->prepare("DELETE FROM `SESSION` WHERE ID=:sessionID");
+
+	$stmt->bindParam(':sessionID', $sessionID);
+
+	$stmt->execute();
+
+}
+
+deleteSession($_COOKIE["sessionID"]);
+
 require $_SERVER["DOCUMENT_ROOT"].'/password_compact/lib/password.php';
 
 function userExists($user) {
@@ -100,7 +121,7 @@ function setSession($user, $sessionID) {
 	}
 
 	//Prepared statements make sure that we don't fail and have sql injection ...
-	$stmt = $dbh->prepare("UPDATE `SESSION` SET ID=:sessionID WHERE USER=:user");
+	$stmt = $dbh->prepare("INSERT INTO `SESSION` (USER, ID) VALUES (:user,:sessionID)");
 
 	$stmt->bindParam(':user', $user);
 	$stmt->bindParam(':sessionID', $sessionID);
@@ -109,9 +130,43 @@ function setSession($user, $sessionID) {
 
 }
 
+function checkSession() {
+	
+	/*
+	require $_SERVER["DOCUMENT_ROOT"].'/passwords.private';
+	
+	try {
+	$dbh = new PDO("mysql:host=127.0.0.1;dbname=LOGIN", "root", $sqlPass);
+	} catch (PDOException $e) {
+		echo 'Connection failed: ' . $e->getMessage();
+	}
+	*/
+	include $_SERVER["DOCUMENT_ROOT"].'/db/userConnect.php';
+
+	$runs = 0;
+
+	$query = "SELECT DATECREATED FROM SESSION";
+
+	//Prepared statements make sure that we don't fail and have sql injection ...
+	if ($stmt = $db->prepare($query)) {
+		$stmt->execute();
+		$stmt->bind_result($dateCreated);
+
+		/* fetch values */
+		while ($stmt->fetch()) {
+			setcookie("dateCreated".$runs, $dateCreated,time()+3600);
+			$runs++;
+		}
+		
+		$stmt->close();
+
+	}
+
+}
+
 function generateSessionID() {
 	$length = 32;
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()';
     $randomString = '';
     for ($i = 0; $i < $length; $i++) {
         $randomString .= $characters[rand(0, strlen($characters) - 1)];
@@ -136,6 +191,8 @@ if ($passAccepted) {
 } else {
 	setcookie("loginStatus", "User does not exist or pass incorrect",time()+3600);
 };
+
+checkSession();
 
 function userLogin() {
 
