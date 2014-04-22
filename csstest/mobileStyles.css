@@ -4,7 +4,9 @@ body {
 	vertical-align: middle;
 	font-size: 250%;
 
-	padding-top: calc(10% + 60px);
+	margin-top: calc(10% + 10px);
+	margin-left: 8px;
+	margin-right: 8px;
 }
 
 /* Nav elements */
@@ -12,9 +14,24 @@ body {
 div.nav {
 	z-index: 100;
 	background: #1E2224;
+	color: #ffffff;
+	line-height: 100%;
 	/* Position */
 	position: fixed;
 	width: 100%;
+	height: 10%;
+	top: 0px;
+	left: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+div.overflow {
+	z-index: 101;
+	background: #0000ff;
+	/* position etc*/
+	position: fixed;
+	width: auto;
 	height: 10%;
 	top: 0px;
 	left: 0px;
@@ -27,8 +44,11 @@ div.content {
 	text-align: left;
 
 	border: 8px solid #3D4548;
+	padding-left: 10px;
+	padding-right: 10px;
 
-	width: 98%;
+	width: calc(98% - 20px);
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 10px;
 }

@@ -17,6 +17,17 @@ div.nav {
 	left: 0px;
 }
 
+div.overflow {
+	z-index: 101;
+	/*background: transparent;*/
+	background: #0000ff;
+	/* position etc*/
+	position: fixed;
+	width: 0;
+	height: 0;
+	top: 0px;
+	left: 0px;
+}
 
 /* wrapper elements */
 
