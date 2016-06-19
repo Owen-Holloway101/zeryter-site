@@ -26,12 +26,35 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <?php
 function isMobile() {
-	require_once $_SERVER['DOCUMENT_ROOT'].'/core/mobile-detect/Mobile_Detect.php';
-	$detect = new Mobile_Detect;
-	if ($detect->isMobile()) {
-		return true;
-	} else  {
-		return false;
-	}
+    require_once $_SERVER['DOCUMENT_ROOT'].'/core/mobile-detect/Mobile_Detect.php';
+    $detect = new Mobile_Detect;
+    if ($detect->isMobile()) {
+        return true;
+    } else  {
+        return false;
+    }
 }
+	
+if (isMobile()) {
+    echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"/core/mobile.css\"/>";
+} else {
+    echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"/core/desktop.css\"/>";
+}
+
 ?>
+<script type="text/javascript">
+//Enable parallax
+$(document).ready(function(){
+    $('.parallax').parallax();
+});
+            
+$(document).ready(function() {
+    $('select').material_select();
+});  
+
+//Enable modals
+$(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+});
+</script>
