@@ -8,15 +8,17 @@
         <!--NAV Bar START-->
         <ul class="right hide-on-med-and-down">
             <li><a href="/">Home</a></li>
-            <li><a href="/calendar">Calendar</a></li>
-            <li><a href="/links">Links</a></li>
+            <?php
+            include $_SERVER["DOCUMENT_ROOT"]."/core/links.php";
+            ?>
         </ul>
         <!--NAV Bar END-->
         <!--Mobile NAV START-->
         <ul id="nav-mobile" class="side-nav">
             <li><a href="/">Home</a></li>
-            <li><a href="/calendar">Calendar</a></li>
-            <li><a href="/links">Links</a></li>
+            <?php
+            include $_SERVER["DOCUMENT_ROOT"]."/core/links.php";
+            ?>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
     </div>

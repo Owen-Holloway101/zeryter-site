@@ -1,3 +1,21 @@
+body {
+    background-image: url("/assets/dam.jpg");
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+     
+
 .parallax-container {
 	height: 400px;
 }
