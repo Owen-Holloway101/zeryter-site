@@ -1,2 +1,1 @@
-<li><a href="#">About</a></li>
-<li><a href="#">Twit</a></li>
+<!--<li><a href="/about/">About</a></li>-->

@@ -5,17 +5,9 @@ body {
     background-position: right top;
     background-attachment: fixed;
 }
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-main {
-    flex: 1 0 auto;
-}
-     
-
-.parallax-container {
-	height: 400px;
+footer {
+            background-color: #333;
+            width: 100%;
+            bottom: 0;
+            position: fixed;
 }

@@ -5,6 +5,9 @@ if(preg_match('/MSIE/',$_SERVER['HTTP_USER_AGENT']))
 	header("Location: /core/iepage.html");
 	die();
 }
+
+require_once $_SERVER['DOCUMENT_ROOT']."/core/session.php";
+
 ?>
 <head>
 <title>@Zeryter - Home</title>
