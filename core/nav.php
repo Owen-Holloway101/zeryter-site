@@ -24,6 +24,9 @@
     </div>
     <!--Mobile NAV END-->
 </nav>
+<?php
+include $_SERVER["DOCUMENT_ROOT"]."/core/login.html";
+?>
 <script type="text/javascript">
 //Enable mobile pull out menu
 (function($){
