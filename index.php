@@ -11,6 +11,15 @@ require_once $_SERVER['DOCUMENT_ROOT']."/core/session.php";
 ?>
 <head>
 <title>@Zeryter - Home</title>
+<style>
+/*A quick hack because this page doesn't have enough content*/
+footer {
+            background-color: #333;
+            width: 100%;
+            bottom: 0;
+            position: fixed;
+}
+</style>
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"]."/core/styles.php";
 require_once $_SERVER["DOCUMENT_ROOT"]."/core/nav.php";
