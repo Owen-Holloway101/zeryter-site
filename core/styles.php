@@ -26,7 +26,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <?php
 function isMobile() {
-    require_once $_SERVER['DOCUMENT_ROOT'].'/core/mobile-detect/Mobile_Detect.php';
+    require_once $_SERVER['DOCUMENT_ROOT'].'/core/mobile-detect.php';
     $detect = new Mobile_Detect;
     if ($detect->isMobile()) {
         return true;
