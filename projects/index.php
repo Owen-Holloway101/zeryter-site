@@ -15,9 +15,10 @@ require_once $_SERVER['DOCUMENT_ROOT']."/core/session.php";
 require_once $_SERVER["DOCUMENT_ROOT"]."/core/styles.php";
 require_once $_SERVER["DOCUMENT_ROOT"]."/core/nav.php";
 ?>
-<body>
+</head>
+<main>
     <div class="row">
-        <div class="col m8 offset-m2">
+        <div class="col s12 m8 offset-m2">
             <div class="card-panel">
 			So thought I'd give you a quick look at the sort of stuff that I do with tech<br>
 			A bit of bodging, a bit of coding, mostly messy<br>
@@ -47,7 +48,7 @@ require_once $_SERVER["DOCUMENT_ROOT"]."/core/nav.php";
             </div>
         </div>
     </div>
+</main>
 <?php
 include $_SERVER["DOCUMENT_ROOT"]."/core/footer.php";
 ?>
-</body>

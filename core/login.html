@@ -1,0 +1,38 @@
+<!-- Modal Structure -->
+<div id="loginuser" class="modal modal-fixed-footer">
+    <script type="text/javascript">
+        function login() {
+            var url = "/core/login.php"; // the script where you handle the form input.
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: $("#login").serialize(), // serializes the form's elements.
+                success: function(data) {
+                    location.reload();
+                }
+            });
+
+            return false; // avoid to execute the actual submit of the form.
+        }
+    </script>
+     <div class="modal-content">
+     <h4>Login</h4>
+     <form class="col s12" action="/core/login.php" id="login" method="post">
+             <div class="row">
+                 <div class="input-field col s12">
+                     <input id="username" type="text" name="username" class="validate">
+                     <label for="username">Username</label>
+                 </div>
+                 <div class="input-field col s12">
+                     <input id="password" type="password" name="password" class="validate">
+                     <label for="password">Password</label>
+                 </div>
+             </div>
+    </form>
+     </div>
+        <div class="modal-footer">
+        <a href="#!" onclick="login()" class="modal-action modal-close waves-effect waves-green btn-flat ">Login</a>
+        <a href="#!" onclick="newuser()" class="modal-action modal-close waves-effect waves-green btn-flat ">New  User</a>
+     </div>
+</div>
+</div>

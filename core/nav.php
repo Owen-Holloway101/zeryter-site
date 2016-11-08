@@ -20,10 +20,13 @@
             include $_SERVER["DOCUMENT_ROOT"]."/core/links.php";
             ?>
         </ul>
-        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
     <!--Mobile NAV END-->
 </nav>
+<?php
+include $_SERVER["DOCUMENT_ROOT"]."/core/login.html";
+?>
 <script type="text/javascript">
 //Enable mobile pull out menu
 (function($){
