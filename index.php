@@ -6,6 +6,13 @@ if(preg_match('/MSIE/',$_SERVER['HTTP_USER_AGENT']))
 	die();
 }
 
+if(empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] == "off"){
+    $redirect = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    header('HTTP/1.1 301 Moved Permanently');
+    header('Location: ' . $redirect);
+    exit();
+}
+
 require_once $_SERVER['DOCUMENT_ROOT']."/core/session.php";
 
 ?>
@@ -18,7 +25,7 @@ require_once $_SERVER["DOCUMENT_ROOT"]."/core/nav.php";
 </head>
 <main>
     <div class="row">
-        <div class="col s12 m8 offset-m2">
+        <div class="col s12 m10 offset-m1 l8 offset-l2">
             <div class="card-panel">
             Hey there, I am @Zeryter (better know as Owen) I'm and engineering student with a keen sense for design 
             and a passion for just about anything nerdy.</br>

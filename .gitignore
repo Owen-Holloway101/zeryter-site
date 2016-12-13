@@ -1,4 +1,2 @@
 *.private.php
 test
-
-/core/mobile-detect/**

@@ -18,7 +18,7 @@ require_once $_SERVER["DOCUMENT_ROOT"]."/core/nav.php";
 </head>
 <main>
     <div class="row">
-        <div class="col s12 m8 offset-m2">
+        <div class="col s12 m10 offset-m1 l8 offset-l2">
             <div class="card-panel">
 			So thought I'd give you a quick look at the sort of stuff that I do with tech<br>
 			A bit of bodging, a bit of coding, mostly messy<br>
