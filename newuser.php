@@ -18,7 +18,7 @@ require_once $_SERVER["DOCUMENT_ROOT"]."/core/nav.php";
 </head>
 <body>
     <div class="row">
-        <div class="col s12 m8 offset-m2">
+        <div class="col s12 m10 offset-m1 l8 offset-l2">
             <div class="card">
                 <div class="card-content white-text">
                     <form class="col s12" action="/core/login.php" id="login" method="post">
