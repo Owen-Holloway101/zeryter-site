@@ -21,7 +21,7 @@ require_once $_SERVER["DOCUMENT_ROOT"]."/core/nav.php";
         <div class="col s12 m8 offset-m2">
             <div class="card-panel">
 			So thought I'd give you a quick look at the sort of stuff that I do with tech<br>
-			A bit of bodging, a bit of coding, mostly messy<br>
+			A bit of bodging, a bit of coding, usually work in progress<br>
 			<br>
 			<a href="http://welly.tasrovers.com">The Wellington Rover Crew website</a><br>
 			The first real website I made and have been maintaining. It is based on materializecss framework and is a bit of a mess 
