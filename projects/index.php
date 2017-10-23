@@ -23,7 +23,7 @@ require_once $_SERVER["DOCUMENT_ROOT"]."/core/nav.php";
 			So thought I'd give you a quick look at the sort of stuff that I do with tech<br>
 			A bit of bodging, a bit of coding, usually work in progress<br>
 			<br>
-			<a href="http://welly.tasrovers.com">The Wellington Rover Crew website</a><br>
+			<a href="http://welly.tasrovers.com.au">The Wellington Rover Crew website</a><br>
 			The first real website I made and have been maintaining. It is based on materializecss framework and is a bit of a mess 
 			on the backend of the code, but it is always being changed in parallel with this website. The are based on the same tech 
 			and in some ways prototypes for each other. <br>
